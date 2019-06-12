@@ -1,5 +1,9 @@
 <footer class="main-footer text-center">
-    .<strong>Copyright &copy; 2018 <a href="{{url('/home')}}">{{App\Setting::first()->site_name}}</a>,</strong> All rights
+    .<strong>Copyright &copy; 2018 <a href="{{url('/home')}}">
+            @if(App\Setting::first())
+            {{App\Setting::first()->site_name}}
+            @endif
+        </a>,</strong> All rights
     reserved
 </footer>
 
@@ -48,7 +52,7 @@
 
 
 <script>
-    $(function () {
+    $(function() {
         // Replace the <textarea id="editor1"> with a CKEditor
         // instance, using default configuration.
         CKEDITOR.replace('editor1');
@@ -59,7 +63,6 @@
 
 <script src="{{ asset('public/cpanel/js/toastr.min.js') }}"></script>
 <script>
-
     @if(Session::has('success'))
     toastr.success("{{Session::get('success')}}")
     @endif
@@ -75,18 +78,18 @@
     @if(Session::has('error'))
     toastr.error("{{Session::get('error')}}")
     @endif
-
 </script>
 
 {{--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>--}}
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
-    $( function() {
-        $( ".datepicker" ).datepicker();
-    } );
+    $(function() {
+        $(".datepicker").datepicker();
+    });
 </script>
 
 @yield('scripts')
 
 </body>
+
 </html>

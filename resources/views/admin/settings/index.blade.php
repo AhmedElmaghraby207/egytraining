@@ -18,6 +18,7 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body col-sm-8 col-sm-offset-2 form-group">
+                    @if($setting)
                     <div class="text-center form-group">
                         <h3>اسم الموقع</h3>
                         <p class="form-control">{{$setting->site_name? $setting->site_name : 'غير محدد'}}</p>
@@ -87,7 +88,7 @@
                         <h3>لينك صفحة Linkedin</h3>
                         <p class="form-control">{{$setting->linkedin ? $setting->linkedin : 'غير محدد'}}</p>
                     </div>
-
+                    @endif
                 </div>
                 <!-- /.box-body -->
             </div>
