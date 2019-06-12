@@ -1,0 +1,13 @@
+FTP server: ftp.ieademos.com
+Username: hassan@ieademos.com
+Password: bf0-&w4=c2A_
+FTP & explicit FTPS port:  21
+
+
+
+
+for (photo-maker)
+Database name: ieademos_almaghraby_DB
+Username: ieademos_maghrby
+
+
